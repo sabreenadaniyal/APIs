@@ -15,11 +15,10 @@ export default async function Home() {
       {/*JSON.stringify() converts a value to the JSON notation that the value represents.*/}
 
       {
-        response.map((users: any) => (
+        response.map((users: any,key: string) => (
           <div>
             <Link href={`${users.id}`}>
               <h1 className="text-xl text-black bg-gray-200 hover:bg-green-700 border-2 border-indigo-300">
-
                 {users.id}   {users.name} <br />
 
               </h1>
