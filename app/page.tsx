@@ -16,7 +16,7 @@ export default async function Home() {
 
       {
         response.map((users: any,key: string) => (
-          <div>
+          <div key={users.id}> {/* Add a unique key here */}
             <Link href={`${users.id}`}>
               <h1 className="text-xl text-black bg-gray-200 hover:bg-green-700 border-2 border-indigo-300">
                 {users.id}   {users.name} <br />
